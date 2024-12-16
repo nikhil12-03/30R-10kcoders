@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=""><center><fieldset><h1>Telengana State Road Transport Corporation</h1>
+<h2>General Buss Pass Application</h2></fieldset></center>
+<br>
+
+    <fieldset><table></table>
+    <legend>Applicant Details</legend>
+   
+        <label for="name">Name *</label> 
+    <input type="text" id="name" name="name" maxlength="20" title="maximum characters:20"autocomplete="off" required </td><br><br>
+    
+        <label for="Father's/Gaurdian's Name">Father's/Gaurdian's Name*</label>
+        <input type="text"id="Father's/Gaurdian's Name" name="Father's/Gaurdian's Name" required><br><br>
+        <label for="dob">Date of Birth(dd/mm/yyyy):</label>
+        <input type="text" name="dob" id="dob"pattern="\d{2}/\d{2}/\d{4}" placeholder="dd/mm/yyyy"required> <br><br>
+       <label for="gender">Gender:</label> 
+       <input type="radio" id="female" name="gender" value="Female" required> 
+       <label for="female">Female</label> 
+       <input type="radio" id="male" name="gender" value="Male" required> 
+       <label for="male">Male</label><br><br>
+       <label for="AadhaarNumber">Aadhaar Number*:</label>
+       <input type="text"id="AdharNumber" name="AadhaarNumber"pattern="\d{12}"placeholder="xxxxxxxxxxxx"required><br><br> 
+       <label for="WhatsapNumber">Whatsap Number*:</label>
+       <input type="text"id="WhatsapNumber"name="WhatsapNumber"pattern="\d{10}"><br><br>
+       <label for="email">E-mail Id*:</label> 
+       <input type="email" id="email" name="email" required><br><br>
+       <label for="photo">Photo*:</label>
+       <input type="file"id="photo"name="photo"accept="image/*"required>
+
+    </fieldset>
+    <br><br>
+    <fieldset> 
+        <legend>Residential Address Details</legend>
+         <label for="address">Applicant's Address*:</label> 
+         <textarea id="address" name="address" rows="4" cols="50" maxlength="100" required></textarea><br><br> 
+        <label for="district">District*:</label>
+          <select id="district" name="district" required>
+             <option value="">Select</option> 
+             <option value="HYDERABAD">HYDERABAD</option> 
+          </select><br><br> 
+        <label for="mandal">Mandal*:</label> 
+           <select id="mandal" name="mandal" required> 
+            <option value="">Select</option> 
+            <option value="HYDERABAD">HYDERABAD</option> </select><br><br> 
+        <label for="village">Village*:</label> 
+          <select id="village" name="village" required> 
+            <option value="">Select</option> 
+            <option value="HYDERABAD">HYDERABAD</option> </select><br><br> 
+        <label for="pincode">Pincode*:</label> 
+        <input type="text" id="pincode" name="pincode" pattern="\d{6}" placeholder="6-digit Pincode" required><br><br> 
+    </fieldset> 
+    
+    <fieldset> 
+        <legend>Pass Type Details</legend>
+         <label for="city">City*:</label> 
+         <select id="city" name="city" required> 
+            <option value="">Select</option> 
+            <option value="Hyderabad">Hyderabad</option> </select><br><br> 
+        <label for="pass-type">Pass Type*:</label> 
+        <select id="pass-type" name="pass-type" required> 
+            <option value="">Select</option> 
+            <option value="Monthly">Monthly</option> 
+            <option value="Quarterly">Quarterly</option> 
+            <option value="Yearly">Yearly</option> </select><br><br> 
+    </fieldset> 
+    
+    <fieldset> 
+        <legend>Mode of Payment & Pass Collection</legend> 
+        <label for="payment-mode">Payment Mode*:</label> 
+          <select id="payment-mode" name="payment-mode" required> 
+            <option value="">Select Payment Mode</option> 
+            <option value="Online">Online</option> 
+            <option value="Cash">Cash</option> </select><br><br> 
+        <label for="pass-delivery-mode">Pass Delivery Mode*:</label> 
+         <select id="pass-delivery-mode" name="pass-delivery-mode" required>
+             <option value="">Select Pass Delivery Mode</option> 
+             <option value="Pick-up">Pick-up</option> 
+             <option value="Home Delivery">Home Delivery</option> </select><br><br> 
+        <label for="pass-collection-center">Center at which you want to Collect Pass*:</label> 
+          <select id="pass-collection-center" name="pass-collection-center" required> 
+            <option value="">Select</option> <option value="Center 1">Center 1</option> 
+            <option value="Center 2">Center 2</option> </select><br><br> 
+    </fieldset>
+   
+    <fieldset> 
+        <legend>Captcha</legend> 
+        <label for="captcha">Captcha*:</label> 
+        <input type="text" id="captcha" name="captcha" required placeholder="enter below captcha"pattern="mo2Qhq"> <br>
+        captcha:mo2Qhq
+        <br> <br></fieldset> 
+            
+    <input type="submit">
+</form>
+
+</body>
+</html>
