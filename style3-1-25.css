@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+header{border: .5px lightblue;
+    border-style: hidden;
+    background-color: aliceblue;
+    color: black;
+    font-size: medium;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0px;    
+}
+
+
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+   .projectcontainer {
+    text-align: center;
+    font-size: 0;
+  }
+  
+  .project {
+    display: inline-block;
+    width: 25%;
+    position: relative;
+    padding: 5px;
+    font-size: 16px;
+    vertical-align: top;
+  }
+  
+  .project  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .label {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+span {
+    position: absolute;
+    right: 20px;
+  }
+  h2{
+    margin: 10px;
+    border-bottom: 2px solid lightcyan;
+  }
+  p{
+
+padding-left: 10px;
+  }
