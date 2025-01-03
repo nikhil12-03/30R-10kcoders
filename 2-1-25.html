@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  .outer-box
+{
+    position:relative;
+    width: 300px;
+    height: 300px;
+border: 2px solid greenyellow;
+}
+
+.inner-box
+{width:100px;
+    height:100px;
+    border: 2px solid lightcoral;
+    position: absolute; top: 100px; right:100px;
+  
+}
+.card{
+    width: 250px;
+    height: 250px;
+    border:1.5px solid lime;
+    position: relative;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    border: 1px solid; solid red;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 0px;
+    right: 1px solid;;
+    align-content: center;
+}
+.avatar-container {border: 1px solid; solid black;
+    width: 500px;
+    height :500px;
+    position: relative;
+  }
+  
+  .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    /* border-radius: 50%; */
+    padding: 5px;
+    font-size: 12px;
+  }
+  
+  .avatar {
+    width: 300px; 
+    height: 300px;
+    position: absolute;
+    right: 0px;
+  }
+  
+  .image-container{border: 1px solid; solid blueviolet;
+    width: 100%;
+    height: 20%;
+   position:relative;
+}
+.overlay{
+position: absolute;
+top: 100px;
+left: 150px;
+font-size:xx-large;
+font-family: fantasy;
+font-stretch: extra-expanded;
+}
+    </style>
+<style>
+        .tooltip-container { border:1px solid;
+            position: relative;
+            display: inline-block;
+            top: 50px;
+            left:200px;
+          }
+          
+          .tooltip {
+            position: absolute;
+            bottom: 100%; /* Position above the button */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            color: white;
+            padding: 5px;
+            border-radius: 4px;
+            visibility: hidden;
+            opacity: 0; /* Initially hidden */
+          transition: .5s;
+        }
+        .tooltip-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+          }
+</style>
+</head>
+<body>
+    <h1>Task-1</h1>
+    <div class="outer-box">
+     <div class="inner-box"></div>
+    </div>
+    <h1>Task-2</h1>
+    <div class="card">
+        <div class="icon">
+           N
+        </div>
+    </div>
+    <h1>Task-3</h1> 
+
+    <div class="tooltip-container">
+        <button class="button">Hover Me</button>
+        <div class="tooltip">Tooltip Text</div>
+      </div>
+      
+      
+      <br>
+      <br>
+      <br>
+      <h1>Task-4</h1>   
+    <div class="avatar-container">
+        <picture>
+            <img src="https://yt3.googleusercontent.com/-CFTJHU7fEWb7BYEb6Jh9gm1EpetvVGQqtof0Rbh-VQRIznYYKJxCaqv_9HeBcmJmIsp2vOO9JU=s900-c-k-c0x00ffffff-no-rj" alt="Avatar" class="avatar">
+        </picture>
+        <div class="badge">1</div>
+    </div>
+    <h1>Task-5</h1>
+    <div class="image-container">
+        <img src="https://images7.alphacoders.com/135/1357565.png" alt="Sample Image"width="100%" class="image">
+        <div class="overlay"><h2>RED BLOOD COMMANDER IGRIS</h2></div>
+    </div>        
+
+</body>
+</html>
