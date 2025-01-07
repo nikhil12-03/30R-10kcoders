@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .cont1{
+      background-color: rgb(109 46 169); 
+      height: 700px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-wrap:wrap;
+    }
+    .cont2{ 
+        background-color: rgb(51, 28, 72);
+     width: 400px;
+     height: 500px;
+    box-shadow: 0px 0px 5px 5px paleturquoise;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+     flex-shrink: 1;
+     border-radius: 1px;
+    }
+    h2,p{
+        color: rgb(123, 48, 243);
+    }
+    
+    input{ display: flex;
+        width: 300px;
+        padding: 15px;margin: 15px;
+       
+    }
+    a{
+        text-decoration: none;
+        color: rgb(163, 201, 235);
+    }
+    .text{
+        background-color:rgb(158, 186, 239);
+        display: flex;
+        align-items: center;color:rgb(61, 4, 113);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif 
+    }</style>
+</head>
+<body>
+    <div class="cont1">
+        <div class="cont2">
+            <h2>MASTERY GAMES</h2>
+            <p>Create your account</p>
+            <form action="./accountcreated.html" method="get">
+             <input  type="text" username="FIRST-NAME" placeholder="First-Name" required>
+             <input  type="text" username="FIRST-NAME" placeholder="Email-id"pattern="[a-z\d]+@gmail.com">
+             <input type="text" username="FIRST-NAME" placeholder="Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[*!@#$%^&]).{8,16}" title="one char of upper and lower,number,symbol">
+             <input type="submit"class="text" value=" Create Account">  </form>
+             <p>Already have a Mastery Games account?    <a href="">Sign in</a></p>
+           
+            </div>
+
+    </div>
+</body>
+</html>
