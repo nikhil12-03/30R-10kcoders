@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>*{margin:0;
+        padding: 0;
+        box-sizing: border-box;}
+        .parent{
+            width: 100%;
+            height: 900px;
+            border: 2px solid ;
+            display:flex;
+            justify-content: center;
+            align-items: center ;
+            flex-wrap: wrap;
+        }
+        .child{
+            border: 1px solid;
+            margin: 10px;
+            width: 350px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            flex-grow: 1;
+            flex-shrink: 1;
+            
+        }
+         img{
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            
+        }
+        p{
+            position:absolute;
+            color: aliceblue;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            
+        
+        }
+        .child:hover p{
+            opacity: 1;
+            transition: 0.5s;
+            font-size: 1.5rem;
+            font-family: cursive;
+            font-weight: bold;
+            height: fit-content;
+            display: flex;
+            background-color: black;
+            height:350px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        </style>
+
+</head>
+<body>
+   <div class="parent">
+    <div class=" child child1" > 
+        <img  src="https://mrwallpaper.com/images/high/dope-anime-luffy-digital-art-xovgfid9god39jv2.jpg" alt="luffy">
+        <p>Monkey.D.Luffy</p>
+    </div>
+    <div class=" child child2"> <img src=" https://motionbgs.com/media/3584/zoro-one-piece.jpg"alt="RONO NOA ZORO">
+       <p>Rononoa ZORO</p> </div>
+    <div class=" child child3"> <img src="https://4kwallpapers.com/images/wallpapers/shanks-5k-one-piece-1920x1080-18352.jpg" alt="">
+        <p>SHANKS</p></div>
+    <div class=" child child4"> <img src="https://wallpapers.com/images/hd/kyojuro-rengoku-ready-to-fight-xwcfrqoeah5r94xc.jpg" alt="">
+        <p>KyōjurōRengoku</p></div>
+    <div class=" child child5"> <img src="https://a-static.besthdwallpaper.com/demon-slayer-yoriichi-tsugikuni-wallpaper-1680x1050-88454_5.jpg" alt="YORIICHI">
+       <p>YoriichiTsugikuni</p> </div>
+    <div class=" child child6"> <img src="https://applescoop.org/image/wallpapers/mac/smiling-naruto-uzumaki-anime-desktop-wallpaper-preview-manga-28-10-2024-1730151823-hd-wallpaper.jpg" alt="">
+      <p>NARUTO UZUMAKI</p> </div>
+     <div class=" child child7"> <img src="./itachi-uchiha-naruto-amoled-black-background-minimal-art-1280x1280-6478 (1).jpg" alt="">
+        <p>Itachi Uchiha</p></div>
+    <div class=" child child8"><img src="https://wallpapers.com/images/hd/jinwoos-shadow-army-solo-leveling-4k-hprkuvt8zhmwdurl.jpg" alt="">
+        <p>Sung Jin Woo</p> </div>
+   </div>
+</body>
+</html>
