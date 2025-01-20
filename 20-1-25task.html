@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .*{
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+           
+        }
+        .box-px{
+            width: 200px;
+            height: 100px;
+            border: 1px solid;
+            box-sizing:border-box;display: flex;
+            justify-content: center;
+        align-items: center;
+        }
+        .parent{
+            width: 400px;
+            height: 500px;
+            background-color:black;
+        }
+        .parent .child{
+            width: 50%;
+            height: 200px;
+            background-color: aqua;display: flex;
+            justify-content: center;
+        align-items: center;
+        }
+        p{
+            font-size: 2rem;
+        }
+        
+
+        
+        html .p{
+            font-size: 36px;
+        }
+        .parent-em{
+            width: 400px;
+            height: 80px;
+            background-color: lightgreen;
+            font-size: 16px;
+        }
+        .parent-em .child-em{
+            font-size: 1.5em;display: flex;
+            justify-content: center;
+        align-items: center;
+        }
+        .box-vw{
+            width: 50vw;
+            height: 100px;
+            background-color: lightseagreen;
+        }
+        .box-vh{
+            height: 25vh;
+            /* width: 100px; */
+            background-color: lightsalmon;
+        }
+        .square-vmin{
+            width: 20vmin;
+            height:20vmin;
+            background-color: lightcoral;
+        }
+        .square-vmax{
+            width: 20vmax;
+            height: 20vmax;
+            background-color: lightblue;
+        }
+        .parent-relative{
+            position: relative;
+            width: 500px;
+            height:500px;
+            background-color: rgb(142, 240, 101);
+        }
+        .child-absolute{
+            position: absolute;
+            width:25%;
+            height: 25%;
+            background-color:rgba(255, 0, 0, 0.632);
+            bottom: 0;
+            right: 0.5px;display: flex;
+            justify-content: center;
+        align-items: center;
+            
+        }
+        .parent-font{
+            background-color: rgb(123, 172, 214);
+            width: 500px;
+            height: 200px;display: flex;
+            justify-content: center;
+        align-items: center;
+        font-size:20px;
+        }
+        .child-font{
+            background-color: aquamarine;
+            font-size: inherit;
+        }
+    </style>
+</head>
+<body>
+<h2>task-1</h2>
+    <div class="box-px"> box with px units </div>
+<hr>
+<h2>task-2</h2>
+    <div class="parent">
+        <div class="child">box with % units</div>
+    </div>
+    <hr>
+<h2>task-3</h2>
+     <p>this paragraph uses rem units set to 2rem</p>
+     <p class="p">this paragraph uses rem units set to 2rem and its root font size is changed to 36px from default 16px</p>
+     <hr>    
+<h2>task-4</h2>
+     <div class="parent-em">
+        this line is of 16px size
+        <p class="child-em">this paragraph uses em-units  set to 1.5em</p>
+     </div><hr>
+<h2>task-5</h2>
+    <div class="box-vw">box with vw units set to 50vw</div>
+    <hr>
+<h2>task-6</h2>
+    <div class="box-vh">box with vh units set to 25vh</div>
+    <hr>
+<h2>task-7</h2>
+    <div class="square-vmin">square with vmin units set to 20vmin</div>
+</body><hr>
+<h2>task-8</h2>
+    <div class="square-vmax">square with vmax units set to 20vmax</div><hr>
+<h2>task-9</h2>
+    <div class="parent-relative">
+        <div class="child-absolute">child box</div>
+    </div>    
+    <br>
+<h2>task-10</h2>
+    <div class="parent-font">
+        <div class="child-font">child text inherit fontsize from parent which is set to 20px </div>
+    </div>    
+</html>
