@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+       
+     .maincont{width: 100vw;
+        height: 200px;
+        background-color: black;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+     }
+     .redcont{margin: 15px;
+        width: 20%;
+        height: 150px;
+        background-color: rgba(255, 0, 0, 0.642);display: flex;justify-content: center;align-items: center;
+     }
+     .itemcont{width: 40%;
+        height: 150px;
+        margin-right: 15px;
+        background-color: aliceblue;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+     .item{margin:10px;
+        width: 50%;
+        height: 70px;
+
+     }
+     .item-1{
+        background-color: aqua;
+     }
+     .item-2{
+        background-color: black;color:white;
+     }
+     
+     .task1{
+      width: 300px;
+      height:300px;
+      border: 1px solid;
+      text-align: center;
+     }
+     .task2{
+      background-color: antiquewhite;color: black;
+     }
+     .cont{
+         /* background-colorcadetblue; */border: 1px solid;margin-left: 10px;margin-right: 10px;    }
+     .item{display: flex;align-items: center;justify-content: center;flex-grow: 1;
+      border: 1px solid;
+     }
+   .a{
+      background-color: aqua;
+   }
+   .b{
+      background-color: pink;
+   }
+   .c{background-color:blue;}
+   .image{
+      width: 40vw;
+   }
+   .padding{
+      border: 1px solid;
+      width: 50vw;
+   }
+   .header{display: flex;background-color: black;color: white;padding: 8px;
+   justify-content: space-around;}
+   #eight{ font-size: 30px;}
+   .nine{gap: 10px;width:40vw }
+   .col1,.col2{width:400px;height:50px;border:.5px solid;display: flex;align-items: center;justify-content: center;}
+   .col1{background-color: #DCB5FF;}
+   .col2{background-color: #D9F2FF;}
+   .ten{ width: 50vw;   }
+   a{color:#7ED4AD;}
+   .fourteen{width:100px;}.fourteen .item{width: 100%;margin-left: 0px;}
+   .itema{background-color: #A31D1D;}
+   .itemb{background-color: #E5D0AC;}
+   .itemc{background-color: #FEF9E1;}
+   .webpage{display:flex;flex-direction: row;gap: 10px;}
+   @media screen and (min-width : 600px){.webpage{flex-direction: column;justify-content:center ;align-items: center;}}
+   @media screen and (min-width : 800px) and (max-width : 1200px) {.fourteen{width: 250px;}}
+   @media screen and (min-width : 1024px) {.twelve{border:2px solid black;}}
+   @media screen and (min-width : 500px) and (max-width : 800px){h2{font-size: 20px;}}
+   @media screen and (min-width : 700px) and (max-width : 1200px){a{color: blue;}}
+   @media screen and (max-width : 600px){.ten{width:100vw}}
+   @media screen and (min-width : 768px) and (max-width : 1200px){.nine{display: grid;grid-template-columns: 1fr  1fr;gap: 4px;}} 
+   @media screen and (max-width : 480px){#eight{font-size: 16px;}}   
+   @media screen and (min-width : 600px) and (max-width : 1200px){.header{background-color: lightgrey;color: black;}}
+   @media screen and (min-width : 1024px){.padding{padding: 20px;}}
+   @media screen and (max-width : 399px){.image{display: none; }}
+   @media screen and (min-width : 500px) and (max-width : 800px){h1{color: green;}}
+   @media screen and (min-width : 480px) {.cont{display:flex}}
+   @media screen and (min-width : 600px) and (max-width : 1200px) {.task2{font-size: 18px;background-color: aquamarine;color: black;}}
+   @media screen and (min-width : 768px) and (max-width : 1024px){.task1{background-color: lightblue;}}
+   @media screen and (max-width : 500px){.itemcont{display: none;}}
+    </style>
+</head>
+<body>
+   <h2>task-1.1</h2><br>
+      <div class="task1">background color changes from white to blue when the min width of viewport is 768 till its &lt;1024</div>
+   <br><hr><br>
+   <h2>task-1.2</h2><br>
+   <p class="task2">the font size of this paragraph will change to 18px when the viewport width is in range of 600px to 1200px</p>
+   <br><hr><br>
+   <h2>task1.3</h2><br>
+     <div class="cont">
+        <div class="item a">item-1</div>
+        <div class="item b">item-2</div>
+        <div class="item c">item-3</div>
+     </div><br><hr><br>
+   <h2>task-1.4</h2><br>
+      <h1>this is a h1 element</h1>
+      <p>this is paragraph tag</p>
+      <h1>this is h1 element</h1>
+   <br><hr><br>
+   <h2>task-1.5</h2><br>
+    <img class="image"src="https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2022/10/Collage-Maker-09-Oct-2022-0847-AM.jpg" width="100%"alt="image">
+   <br><hr><br>
+   <h2>task-1.6</h2><br>
+    <div class="padding"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel natus autem fugiat mollitia atque labore</div><br><hr><br>
+   <h2>task-1.7</h2><br>
+      <div class="header">
+         <div class="item7.1">home</div>
+         <div class="item7.2">about</div>
+         <div class="item7.3">where</div>
+      </div> <br><hr><br>
+   <h2>task-1.8</h2><br>
+     <p id="eight">this paragraph font size is set to  30px and when viewport width is smallerthan 480px size changes to 16px</p><br><hr><br>
+   <h2>task-1.9</h2><br>
+    <div class="nine">
+     <div class="col1">column-1</div>
+     <div class="col2">column-2</div>
+    </div><br><hr><br> 
+   <h2>task-1.10</h2><br>
+     <img class="ten"src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e49d24c6-b958-4bd7-ac83-deabde99d70e/deoiciu-f0fb6eb2-a876-4157-b263-f5a79d0950d1.png/v1/fill/w_1920,h_1280,q_80,strp/straw_hats_to_onigashima___by_greciiagzz_deoiciu-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U0OWQyNGM2LWI5NTgtNGJkNy1hYzgzLWRlYWJkZTk5ZDcwZVwvZGVvaWNpdS1mMGZiNmViMi1hODc2LTQxNTctYjI2My1mNWE3OWQwOTUwZDEucG5nIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.y_V0hLBgu5Rt54nh_gW3wiiQETWcVdu4iv1iyOCRxEo" alt=""><br><hr><br>
+   <h2>task-1.11</h2><br>
+      <a href="https://google.com">Google</a><br>
+      <a href="https://facebook.com">Facebook</a><br><hr><br>
+   <h2>task-1.12</h2>
+      <h2>this is a h2 element the fonyt size of this elemrent changes to 20px when the viewport width is between 500 and 800 px</h2><br><hr><br> 
+   <h2>task-1.13</h2>  
+      <div class="twelve">this is a div element, will have 2px solid balck border when the viewport is greater than or equals to 1024px </div><br><hr><br>
+   <h2>task-1.14</h2>
+    <div class="fourteen">
+      <div class="item itema">item-1</div>
+      <div class="item itemb">item-2</div>
+      <div class="item itemc">item-3</div>
+    </div><br><hr><br>
+   <h2>task-1.15</h2> <br>
+   <div class="webpage">
+      
+       <h1>this is my web page</h1>     
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>   
+   </div><br><hr><br>
+   <center><h2>task-2</h2></center><br>
+    <div class="maincont">
+        <div class="redcont">RED</div>
+        <div class="itemcont">
+            <div class="item item-1">AQUA</div>
+            <div class="item item-2">BLACK</div>
+            
+        </div>
+    </div>
+    <br>
+</body>
+</html>
