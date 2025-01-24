@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID task-1</title>
+    <style>header{background-color:black;color:white;width: 100%;padding: 10px;display: flex;justify-content: space-around;}a{color: white;text-decoration: none;}
+        body{height: 100vh;margin: 0;padding: 0;box-sizing: border-box;width: 100%;}
+        .grid-container{height:40%;gap: 2%;box-sizing: border-box;
+            display: grid;            
+            grid-template-columns: repeat(4,1fr) ;
+            grid-template-rows: repeat(3,1fr);background-color:aliceblue;}
+        .ele{border: 1px solid #333;}
+        .ele1{grid-column: 1/2;grid-row: 1/4;background-color: rgb(55, 229, 55);}
+        .ele2{grid-column: 2/4;width: 2fr;background-color: rgb(55, 229, 55);}
+        .ele3{grid-column: 2/3;background-color: yellow; }.ele7{background-color: yellow;}.ele4{background-color: red;}
+        .ele5{grid-row:2/4;grid-column: 4/5;background-color: rgb(55, 229, 55);}.ele6{background-color: red;}
+        .ele8{grid-row:1/2;grid-column: 4/5;background-color: red;}
+    
+    </style>
+</head>
+<body>
+    <header>
+        <a href="./24-1-25task.html"target="_blank">TASK-1</a>
+        <a href="./24-1-15task2.html"target="_blank">TASK-2</a>
+        <a href="./24-1-25task3.html"target="_blank">TASK-3</a>
+      </header>
+      <br>
+
+    <div class="grid-container">
+        <div class="ele ele1"></div>
+        <div class="ele ele2"></div>
+        <div class="ele ele3"></div>
+        <div class="ele ele4"></div>
+        <div class="ele ele5"></div>
+        <div class="ele ele6"></div>
+        <div class="ele ele7"></div>
+        <div class="ele ele8"></div>
+    </div>
+
+
+
+</body>
+</html>
