@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast&Furious</title>
+  <link rel="stylesheet" href="./style.css">
+   <!-- <link rel="stylesheet" href="./style-1.css"> -->
+  <link rel="icon" href="./mini-car_14951477.gif" type="image/gif">
+  <script>
+    window.addEventListener('scroll', function() {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 0);
+    });
+  </script>
+</head>
+<body>
+  <header class="navbar">
+    
+    <div class="logo"><a href="">RevUp Wheels</a></div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#services-section">Services</a>
+      <a href="#Featured">Featured Cars</a>
+      <a href="#premium">Premium Collection</a>
+      <a href="#brands">Brands</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  
+  <section class="header"></section>
+<!-- searchbox -->
+
+    <div class="search-container">
+      <h2>Find Your Dream Car</h2>
+      <form class="search-form">
+        <select>
+          <option>Select Year</option>
+          <option>2025</option>
+          <option>2024</option>
+          <option>2023</option>
+          <option>2022</option>
+          <option>2021</option>
+        </select>
+        <select>
+          <option>Body Style</option>
+          <option>Sedan</option>
+          <option>SUV</option>
+          <option>Coupe</option>
+          <option>Convertible</option>
+          <option>Truck</option>
+        </select>
+        <select>
+          <option>Select Make</option>
+          <option>BMW</option>
+          <option>Audi</option>
+          <option>Mercedes</option>
+          <option>Porsche</option>
+          <option>Lamborghini</option>
+          <option>Ferrari</option>
+        </select>
+        <select>
+          <option>Select Model</option>
+          <option>M4</option>
+          <option>R8</option>
+          <option>G-Class</option>
+          <option>911</option>
+          <option>Huracan</option>
+          <option>F8</option>
+        </select>
+        <select>
+          <option>Condition</option>
+          <option>New</option>
+          <option>Used</option>
+          <option>Certified Pre-Owned</option>
+        </select>
+        <select>
+          <option>Price Range</option>
+          <option>Under $50,000</option>
+          <option>$50,000 - $100,000</option>
+          <option>$100,000 - $200,000</option>
+          <option>Above $200,000</option>
+        </select>
+        <button>Search</button>
+      </form>
+    </div>
+  
+<!-- services -->
+<section class="services-section"id="services-section">
+  <h2>Our Services</h2>
+  <div class="services-container ">
+    <div class="service-card">
+      <img src="data:image/png;base64,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" alt="Car Insurance">
+      <h3>Car Insurance</h3>
+      <p>Comprehensive car insurance plans to protect your vehicle.</p>
+    </div>
+    <div class="service-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgUfpQ6VgT90TjrCncQmagyauX5fKw9GByag&s" alt="">
+      <h3>Car Repairs</h3>
+      <p>Reliable and affordable car repair services to keep you on the road.</p>
+    </div>
+    <div class="service-card">
+      <img src="https://www.tribuneindia.com/sortd-service/imaginary/v22-01/jpg/large/high?url=dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9tZWRpYTU0YTJmYzIwLTkwNDctMTFlZi04YTBkLWIzMzdmNjgxZjg3My5qcGc=" alt="Car Financing">
+      <h3>Car Financing</h3>
+      <p>Easy financing options to help you purchase your dream car.</p>
+    </div>
+  </div>
+</section>
+<!-- FEATURED cars -->
+  <section class="section"id="Featured">
+    <h2>Featured Cars</h2>
+    <div class="car-grid">
+      <div class="car-card car1"><img src="https://images.carexpert.com.au/resize/3000/-/app/uploads/2022/02/2022-BMW-iX3-03-DSC00878.jpg" alt="Car"><p>BMW iX3 - $87,800</p></div>
+      <div class="car-card car2"><img src="https://cdni.autocarindia.com/ExtraImages/20210406045751_2024_gmc_hummer_ev_suv_023.jpg" alt="Car"><p>Hummer GMC EV-SUV - $115,300</p></div>
+      <div class="car-card car3"><img src="https://media.ed.edmunds-media.com/audi/rs-q8/2025/oem/2025_audi_rs-q8_4dr-suv_performance_fq_oem_1_1600.jpg" alt="Car"><p>Audi RS Q8 - $254,000</p></div>
+      <div class="car-card car4"><img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202109/Land_Rover_Defender_V8_Bond_Ed.jpg?size=690:388" alt="Car"><p>LandRover-Defender-V8(Bond Edition)-$116,600</p></div>
+      <div class="car-card car5"><img src="https://storage.googleapis.com/www.savvydealer.com/new/Ford/Mustang/Dark-Horse/2024/Features/2024-Ford-Mustang-Dark-Horse-Preview-Exterior.jpg" alt=""><p>Mustang - $58,185</p></div>
+      <div class="car-card car6"><img src="https://hips.hearstapps.com/hmg-prod/images/2023-jeep-grand-cherokee-4xe-overland-4x4-712-1676571488.jpg?crop=0.686xw:0.576xh;0.236xw,0.424xh&resize=2048:*" alt="Car"><p>Jeep Grand Cherokee 4xe- $10,30,400</p></div>
+  
+    </div>
+  </section>
+  <!-- PREMIUM COLLECTION -->
+  <section class="premium-section"id="premium">
+    <h2>Premium Collection</h2>
+    <div class="premium-grid">
+      <div class="premium-card card1">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/539ab4b2-551e-4497-a879-fb29676e8d62/d915kso-6f12b06e-ef1f-4138-82d4-b3d7e11d5ca5.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzUzOWFiNGIyLTU1MWUtNDQ5Ny1hODc5LWZiMjk2NzZlOGQ2MlwvZDkxNWtzby02ZjEyYjA2ZS1lZjFmLTQxMzgtODJkNC1iM2Q3ZTExZDVjYTUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dhAX9cGA8pWKV-f8BtPBHYfBFe3Lg0EGSl34WHyHKks" alt="Premium Car 1">
+        <h3>1970 Dodge Charger R/T</h3>
+        <p>Classic Muscle Meets Raw Power</p>
+      </div>
+      <div class="premium-card card2">
+        <img src="https://cimg1.ibsrv.net/gimg/themustangsource.com-vbulletin/1600x900/637392_d226f763664df0a3e90170336600f639de00a17a.jpeg" alt="Premium Car 2">
+        <h3>1970 Ford Mustang</h3>
+        <p>Heritage of Power-Exclusive Limited Edition</p>
+      </div>
+      <div class="premium-card card3">
+        <img src="https://imageio.forbes.com/specials-images/imageserve/669f4d83e8e86c12b4b919cf/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds" alt="Premium Car 3">
+        <h3>Toyota supra Mk4</h3>
+        <p>Precision Performance-OWN The Legend</p>
+      </div>
+      <div class="premium-card card4">
+        <img src="https://m.atcdn.co.uk/vms/media/b68ca1d8a67847e8b61460f8ee5bb88b.jpg" alt="Premium Car 1">
+        <h3>Ferrari LaFerrari</h3>
+        <p>Limited edition, top performance hybrid supercar</p>
+      </div>
+      <div class="premium-card card5">
+        <img src="https://images7.alphacoders.com/971/971421.jpg" alt="Premium Car 2">
+        <h3>Lamborghini Aventador SVJ</h3>
+        <p>Unmatched power and aggressive styling.</p>
+      </div>
+      <div class="premium-card card6">
+        <img src="https://images.ctfassets.net/c9t6u0qhbv9e/2018ChevroletCamaroPreviewsummary/6d74bee73c909e3f8df866f192a80933/2018_Chevrolet_Camaro_Preview_summaryImage.jpeg" alt="Premium Car 3">
+        <h3>2018Chevrolet Camaro</h3>
+        <p>The road is calling,Transform and Roll Out!</p>
+      </div>
+    </div>
+  </section>
+
+
+   <!-- Brands Section with Marquee -->
+   <section class="brands"id="brands">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+        <img src="https://www.carlogos.org/car-logos/ford-logo.png" alt="Brand 1">
+        <img src="https://www.carlogos.org/car-logos/chevrolet-logo.png" alt="Brand 2">
+        <img src="https://www.carlogos.org/car-logos/dodge-logo.png" alt="Brand 3">
+        <img src="https://www.carlogos.org/car-logos/jeep-logo.png" alt="Brand 4">
+        <img src="https://www.carlogos.org/car-logos/audi-logo.png" alt="Brand 5">
+        <img src="https://www.carlogos.org/car-logos/hummer-logo.png" alt="">
+        <img src="https://www.carlogos.org/car-logos/bmw-logo.png" alt="">
+        <img src="https://www.carlogos.org/car-brands/land-rover-logo.html" alt="">
+        <img src="https://www.carlogos.org/car-logos/lamborghini-logo.png" alt="">
+        <img src="https://www.carlogos.org/car-logos/ferrari-logo.png" alt="">
+        <img src="https://www.carlogos.org/car-logos/ford-mustang-logo.png" alt="">
+        <img src="https://www.carlogos.org/car-logos/toyota-logo.png" alt="">
+    </marquee>
+</section>
+  
+  <footer class="footer">&copy; 2025 Fast&Furious. All rights reserved.</footer>
+</body>
+</html>
