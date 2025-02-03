@@ -297,4 +297,76 @@
 }
 
 
+/* brands */
+/* Style the brands section */
+.brands {
+  width: 100%;
+  padding: 20px 0;
+  background-color:lightgray; /* Matches the webpage background */
+  text-align: center;
+}
+
+/* Style images inside the marquee */
+.brands marquee img {
+  width: 120px;
+  height: auto;
+  margin: 0 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.brands marquee img:hover {
+  transform: scale(1.1);
+}
+@media screen and (min-width : 380px) and (max-width : 960px){
+  .nav-links{display: none;}.header{display: flex;justify-content: center;}
+}
+
+
+footer a {
+  color: #ffc107;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Make sure text is responsive */
+@media (max-width: 768px) {
+  body {
+      font-size: 14px;
+  }
+
+  footer {
+      font-size: 14px;
+  }
+}
+/* Apply a clean and modern font to the entire page */
+body {
+  font-family: 'Poppins', sans-serif; /* Simple and attractive font */
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Style headings with a slightly bolder look */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif; /* Clean and elegant font */
+  font-weight: 600;
+}
+
+/* Improve footer styling */
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  border-top: 4px solid #928251; /* Add a highlight to make it stand out */
+}
+
+
 
