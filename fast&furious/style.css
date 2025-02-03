@@ -1,0 +1,300 @@
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    *{scroll-behavior: smooth ;}
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem ;
+      background: transparent;
+      transition: 1s;
+      z-index: 10;
+    }.logo a{text-decoration: none;color: white;}
+    .navbar.scrolled { background: rgba(0, 0, 0, 0.8); }
+    .logo { font-size: 1.8rem; color: white; font-weight: bold; }
+    .nav-links a { text-decoration: none; color: white; margin: 0 15px; font-size: 1.2rem; transition: 0.3s; }
+    .nav-links a:hover { transform: scale(1.1); }
+    .navbar {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+    }
+    
+    /* Hero Section */
+    .header {
+      height: 100vh;
+      background: url('https://cdn.prod.website-files.com/5b4a3b3971d099f78f362505/66e46221c38d34eb97eb66f8_65dfc42a420b252b389b1804_2022-Ferrari-SF90-Stradale-Rosso-Corsa-ZFF95NLA6N0273902_012.webp') no-repeat center/cover;
+      background-size:100vw;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+    }
+    @media screen  and (min-width: 428px) and (max-width : 1095px) {
+  .header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: calc(100vh - HEADER_HEIGHT_PX); /* Adjusts to screen size */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center;
+  }
+}
+
+    
+    /* Search Box */
+    .search-container {display: flex;flex-direction: column;flex-wrap: wrap;
+      position: absolute;
+      bottom: 10%; left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1.5rem;
+      border-radius: 8px;overflow: hidden;
+      width: 80%;
+      
+      text-align: center;
+    }
+    .search-container h2 { color: white; margin-bottom: 1rem; }
+    .search-form {display: flex;flex-wrap: wrap;flex-grow: 1;justify-content: space-evenly;
+      /* display: grid;
+      grid-template-areas:
+        'year body make model condition price'
+        'button button button button button button'; */
+      gap: 1rem;
+    }
+    .search-form select, .search-form button {
+      padding: 0.8rem; border: none; border-radius: 4px; font-size: 1rem;
+    }
+    .search-form select:nth-child(1) { grid-area: year; }
+    .search-form select:nth-child(2) { grid-area: body; }
+    .search-form select:nth-child(3) { grid-area: make; }
+    .search-form select:nth-child(4) { grid-area: model; }
+    .search-form select:nth-child(5) { grid-area: condition; }
+    .search-form select:nth-child(6) { grid-area: price; }
+    .search-form button { grid-area: button; background: red; color: white; cursor: pointer; width: 100%; }
+    @media screen and (max-width : 480px) {.search-container{display: block;}
+      .search-form {
+        display: grid;grid-template-columns: repeat(1,1fr);
+        grid-template-areas:
+          'year' 
+          'body'
+          'make' 
+          'model' 
+          'condition' 
+          'price'
+          'button';
+        gap: 1rem;
+      }
+    }
+      
+    
+    @media screen and(min-width : 481px) and (max-width : 950px){
+      .search-form {
+        display: grid;grid-template-columns: repeat(3,1fr);
+        grid-template-areas:
+          'year body make'
+          'model condition price'
+          'button button button';
+        gap: 1rem;
+      }
+    }
+    
+    /* services */
+    /* Services Section */
+.services-section {
+  text-align: center;
+  padding: 5rem 8rem;
+  background: #f9f9f9;
+}
+
+.services-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allows responsiveness on smaller screens */
+}
+
+.service-card {
+  flex: 1;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 20rem; /* Prevents overly wide cards */
+}
+
+.service-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+}
+@media screen and (max-width : 480px) {
+  .services-container{display: flex;flex-direction: column;}
+}
+
+
+    /* Featured Cars Section */
+    .section { padding: 5rem 8rem; text-align: center; }
+    .section h2 { margin-bottom: 2rem; }
+    .car-grid {
+      display: grid;
+      grid-template-columns: repeat(3,  1fr);grid-template-areas: 'car-1 car-2 car-3'
+      'car-4 car-5 car-6'; /* Three equal columns */
+      gap: 1.5rem;
+      align-items: stretch; /* Makes all grid items stretch to the same height */
+    }
+    .car1{grid-area: car-1;}
+    .car2{grid-area: car-2;}
+    .car3{grid-area: car-3;}
+    .car4{grid-area: car-4;}
+    .car5{grid-area: car-5;}
+    .car6{grid-area: car-6;}
+    .car-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Ensures consistent spacing */
+      align-items: center;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      height: 100%; /* Ensures all cards take full height */
+    }
+    
+    .car-card img {
+      width: 100%;
+      height: 15rem; /* Forces consistent image height */
+      object-fit: cover; /* Ensures images do not stretch */
+      border-radius: 0.5rem;
+    }
+    
+    .car-card h2 {
+      flex-grow: 1; /* Ensures the title area fills available space */
+      text-align: center;
+    }
+    
+    .car-card p {padding-top: 3%;
+      flex-grow: 1; /* Ensures descriptions take equal space */
+      text-align: center;
+    }
+    /* hover */
+    img:hover{transform:scale3d(1.3,1.3,1.3) ;width: max-content;object-fit: contain ;transition:1s ;transition-behavior:inherit;}
+    @media screen and (max-width : 480px ) {
+     .car-grid{ grid-template-columns: repeat(1,  1fr);grid-template-areas:
+      'car-1'
+      'car-2' 
+      'car-3'
+      'car-4' 
+      'car-5' 
+      'car-6'; /* Three equal columns */
+      gap: 1.5rem;
+      align-items: stretch; /* Makes all grid items stretch to the same height */
+     }
+    }
+    @media screen and (min-width : 481px) and (max-width : 960px) {
+      .car-grid{display: grid;grid-template-columns: repeat(2,1fr);grid-template-areas: 
+        'car-1 car-2'
+        'car-3 car-4'
+        'car-5 car-6';}
+    }
+
+/* premium-collection */
+  /* Premium Collection Section */
+.premium-section {width: 100%;
+  padding: 5rem 8rem;
+  text-align: center;
+  background-color: #111; /* Dark background for a premium feel */
+  color: white;
+}
+
+.premium-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.premium-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  gap: 1.5rem;grid-template-areas: 'card-1 card-2 card-3'
+  'card-4 card-5 card-6';
+  align-items: stretch; /* Ensures uniform card height */
+}
+    .card1{grid-area: card-1;}
+    .card2{grid-area: card-2;}
+    .card3{grid-area: card-3;}
+    .card4{grid-area: card-4;}
+    .card5{grid-area: card-5;}
+    .card6{grid-area: card-6;}
+
+.premium-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle white border */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /* Slight transparent white */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.premium-card img {
+  width: 100%;
+  height: 18rem; /* Larger images for premium feel */
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.premium-card h3 {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.premium-card p {
+  flex-grow: 1;
+  font-size: 1rem;
+  text-align: center;
+  color: #ccc;
+}
+@media screen and (max-width : 480px) {
+  .premium-grid{display: grid;grid-template-columns: repeat(1,1fr);grid-template-areas: 
+    'card-1'
+    'card-2'
+    'card-3'
+    'card-4'
+    'card-5'
+    'card-6';}
+}
+@media screen and (min-width : 481px) and (max-width : 960px) {
+  .premium-grid{display: grid;grid-template-columns: repeat(2,1fr);grid-template-areas: 
+    'card-1 card-2'
+    'card-3 card-4'
+    'card-5 card-6';}
+}
+
+
+
