@@ -369,7 +369,10 @@ footer {
 }
 
 
-@media screen and (min-width : 0px) and (max-width : 980px) {
-  .card :hover>img{transform: none;}
-  
+@media (max-width: 900px) {
+    img:hover {
+        transform: none !important;
+        transition: none !important;
+    }
 }
+
