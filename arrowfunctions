@@ -1,7 +1,7 @@
 1.What is an arrow function in JavaScript, and how does its syntax differ from a
  traditional function expression?
     Ans: arrow function in javascript is a cosice way to write a function. it is introduces in ES-6.
-    the syntax of arrow function is much shrter than the traditional function
+    the syntax of arrow function is much shorter than the traditional function
         Ex: 
             Arrow function syntax:
                "variable refvar = (parameters)=>{
