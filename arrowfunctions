@@ -1,0 +1,86 @@
+1.What is an arrow function in JavaScript, and how does its syntax differ from a
+ traditional function expression?
+    Ans: arrow function in javascript is a cosice way to write a function. it is introduces in ES-6.
+    the syntax of arrow function is much shrter than the traditional function
+        Ex: 
+            Arrow function syntax:
+               "variable refvar = (parameters)=>{
+                statements
+                return value
+               }"
+
+            Traditional function syntax:
+               function functionName(parameters){
+                statements
+                return vaue
+               }
+                   
+--------------------------------------------------------------------------------------------------------------------------------------------
+2. Convert the following function into an arrow function:
+function add(a, b) { 
+return a + b; 
+}
+sol:
+      let add=(a,b)=>a+b;
+      add(2,3)//outpt-5
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Rewrite the following function as an arrow function that uses an implicit return:
+function square(n) { 
+return n * n; 
+}
+
+sol:
+   let square = n=>n*n
+   console.log(square(4))
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+4.How does the syntax change for an arrow function when it takes exactly one parameter?
+Explain why parentheses might be omitted in this case
+Ans:
+   when there is only one parameter passed to the function the paranthesis is omited 
+    Ex:  let square = n=>n*n
+   The JavaScript parser automatically knows that the expression is referring to a single parameter, so the parentheses are not required.
+   However, if you have more than one parameter, or none at all, the parentheses must be used:
+
+    Multiple_parameters: (x, y) => x + y
+    No parameters: () => 'Hello'
+  
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Write two versions of an arrow function that calculates the cube of a number. One version should use a concise body with an implicit 
+   return, and the other should use a  block body with an explicit return. Compare the two syntaxes in your code.
+sol:
+    
+     version-1(consice body):
+         let cube=n=>n*n*n
+         console.log(cube(2))
+
+     version-2(block body):
+          let cube=(n)=>{return n*n*n}  
+          console.log(cube(3))
+     
+    here in version-1 the function operation is written as a single line expression. In javascript for an arrow function within a 
+    single expression the return keyword will work implicitly. As of block body we used return keyword explicitly , whenever we use 
+    return keyword explicitly we need to enclose the statements of the function inside {} brackets.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
+
+6.Create an arrow function that takes two parameters (a,b)as inputs and returns the result of subtracting of b from a.
+   Emphasize the syntax with parentheses around the parameters.
+sol:
+   let difference =(a,b)=>return a-b
+   console.log(difference(10,4))
+----------------------------------------------------------------------------------------------------------------------------------------------
+7.Write an arrow function that takes no parameters and returns a fixed message, such as "Hello, World!" . 
+Demonstrate the proper syntax for an arrow function with no parameters      
+sol: 
+    let noParameters= ()=> "Hello, World!"
+    console.log(noParameters())
+   
+     Syntax of Arrow function without parameters:
+           
+             variable refvar=()=>{
+                   statements
+                    return value
+                }
