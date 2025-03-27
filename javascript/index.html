@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Shinjou</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        /* Fullscreen Doodle Background */
+
+    
+
+        /* Background Styling */
+        body {
+            
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: url('https://img.freepik.com/free-vector/hand-drawn-doodle-icons-set_1308-90706.jpg?t=st=1743069587~exp=1743073187~hmac=b0ccbda1591769e8033c5782280bf85ee422bcff3c4b29e74b8f332530370617&w=740'); /* Placeholder URL */
+    background-size:auto;
+    background-attachment: fixed;
+    background-color: #ADB2D4; /* Your theme color */
+        }
+
+        /* Sign-up Form Container */
+        .signup-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            color: white;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Input Styling */
+        input {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 10px;
+            padding: 12px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        input:focus {
+            background: rgba(255, 255, 255, 0.3);
+            outline: none;
+        }
+
+        /* Button Styling */
+        .btn {
+            font-weight: bold;
+            padding: 12px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            font-size: 1rem;
+        }
+
+        .btn-success {
+            background: #17c3b2;
+            border: none;
+        }
+
+        .btn-success:hover {
+            background: #14a399;
+            transform: scale(1.05);
+        }
+
+        /* Google Sign-Up Button */
+        #googleSignup {
+            background: white;
+            color: #444;
+            border: 1px solid #ccc;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #googleSignup img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        #googleSignup:hover {
+            background: #f8f9fa;
+            transform: scale(1.05);
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="signup-card">
+        <h2>Join Shinjou</h2>
+        <p>Sign up and start exploring the best reviews!</p>
+        
+        <form id="signupForm">
+            <div class="mb-3">
+                <input type="text" id="signupName" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" id="signupEmail" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" id="signupPassword" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Create Account</button>
+        </form>
+
+        <!-- Google Sign-Up Button -->
+        <div class="mt-3">
+            <button type="button" id="googleSignup" class="btn w-100">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" 
+                     alt="Google Logo">
+                Sign Up with Google
+            </button>
+        </div>
+
+        <div class="text-center mt-3">
+            <span>Already have an account?</span> <a href="login.html" class="text-light">Log In</a>
+        </div>
+    </div>
+
+
+    <script type="module">
+        // Import Firebase modules
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        // Firebase Configuration (Replace with your Firebase config)
+        const firebaseConfig = {
+            apiKey: "AIzaSyBuTDl4ATMBjWuMa2CmKm9VLW36bj0f-KE",
+     authDomain: "shinjou-88e5a.firebaseapp.com",
+     projectId: "shinjou-88e5a",
+     storageBucket: "shinjou-88e5a.firebasestorage.app",
+     messagingSenderId: "1082184450301",
+     appId: "1:1082184450301:web:70464871c264d530e33e94",
+     measurementId: "G-T6RM47J83Z"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const provider = new GoogleAuthProvider();
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("signupForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                const email = document.getElementById("signupEmail").value;
+                const password = document.getElementById("signupPassword").value;
+
+                createUserWithEmailAndPassword(auth, email, password)
+                    .then(() => {
+                        alert("Account created successfully! Redirecting to login page...");
+                        window.location.href = "login.html";
+                    })
+                    .catch(error => alert(error.message));
+            });
+
+            document.getElementById("googleSignup").addEventListener("click", function() {
+                signInWithPopup(auth, provider)
+                    .then(() => {
+                        alert("Signed up successfully with Google! Redirecting...");
+                        window.location.href = "login.html";
+                    })
+                    .catch(error => alert(error.message));
+            });
+        });
+    </script>
+
+</body>
+</html>
